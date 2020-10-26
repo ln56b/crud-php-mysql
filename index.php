@@ -102,22 +102,24 @@ include('connection.php');
           <form action="add.php" method="POST">
             <div class="form-group">
               <label for="title">Firstname</label>
-              <input type="text" name="firstname" class="form-control" placeholder="Enter first name" maxlength="50"
+              <input type="text" name="firstname" class="form-control" maxlength="50"
                 required>
             </div>
             <div class="form-group">
               <label for="title">Lastname</label>
-              <input type="text" name="lastname" class="form-control" placeholder="Enter last name" maxlength="50"
+              <input type="text" name="lastname" class="form-control"  maxlength="50"
                 required>
             </div>
             <div class="form-group">
               <label for="title">Gender</label>
-              <input type="text" name="gender" class="form-control" placeholder="Enter gender" maxlength="50"
-                required>
+              <select class="form-control" name="gender">
+                <option selected="selected">Madame</option>
+                <option>Monsieur</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="title">Email</label>
-              <input type="text" name="email" class="form-control" placeholder="Enter email" maxlength="50" required>
+              <input type="email" name="email" class="form-control"  maxlength="50" required>
             </div>
             <div class="modal-footer">
               <button type="submit" class="btn btn-primary" name="addClient">Save</button>
@@ -231,7 +233,7 @@ include('connection.php');
 
             <input type="hidden" name="deleteId" id="deleteId">
 
-            <h4>Delete client?</h4>
+            <h4>Do you really want to delete this client?</h4>
 
           </div>
         <div class="modal-footer">
