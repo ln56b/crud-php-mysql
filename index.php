@@ -23,7 +23,6 @@ include('connection.php');
       <ul class="navbar-brand">
         <li><strong>CRUD PHP & MYSQL</strong></li>
         <li><a href="signin.php">Signin</a></li>
-        <li><a href="#clients">Clients</a></li>
       </ul>
     </div>
   </nav>
@@ -31,7 +30,7 @@ include('connection.php');
 
   
   <div class="container">
-    <div class="row"  id="clients">
+    <div class="row">
       <div class="col-md-12 card">
         <div>
           <div class="head-title">
@@ -39,7 +38,7 @@ include('connection.php');
             <hr>
           </div>
           <div class="col-md-3 float-left add-new-button">
-            <a href="#" class="btn btn-primary btn-outline" data-toggle="modal" data-target="#addModal">
+            <a href="#" class="btn btn-warning btn-outline" data-toggle="modal" data-target="#addModal">
               <i class="fas fa-plus"></i> Add a client
             </a>
           </div>
@@ -195,7 +194,7 @@ include('connection.php');
     <div class="modal-dialog modal-md">
       <div class="modal-content">
         <div class="modal-header bg-warning text-white">
-          <h5 class="modal-title">Edit Client</h5>
+          <h5 class="modal-title">Update Client</h5>
           <button class="close" data-dismiss="modal">
             <span>&times;</span>
           </button>

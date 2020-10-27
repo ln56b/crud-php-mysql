@@ -1,3 +1,7 @@
+.container {
+	margin-top: 2rem;
+}
+
 .navbar-brand {
 	display: flex;
 	margin: auto;
