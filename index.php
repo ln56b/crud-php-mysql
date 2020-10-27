@@ -22,7 +22,7 @@ include('connection.php');
     <div class="container">
       <ul class="navbar-brand">
         <li><strong>CRUD PHP & MYSQL</strong></li>
-      <li><a href="#signin">Signin</a></li>
+        <li><a href="signin.php">Signin</a></li>
         <li><a href="#clients">Clients</a></li>
       </ul>
     </div>
