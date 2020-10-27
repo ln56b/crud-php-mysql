@@ -19,6 +19,7 @@ if (isset($_POST['updateClient']))
 
   $result = mysqli_query($conn, $sql);
 
+
   if ($result)
   {
     echo '<script> alert("Client succesfully updated."); </script>';
@@ -27,7 +28,9 @@ if (isset($_POST['updateClient']))
   else
   {
     echo '<script> alert("Impossible to update client."); </script>';
+    echo '<script>window.location = "http://localhost:8888/hospitalidee-php-crud/";</script>';
   }
+
 }
 ?>
 

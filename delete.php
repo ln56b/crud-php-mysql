@@ -17,6 +17,7 @@ if (isset($_POST['deleteClient']))
   else
   {
     echo '<script> alert("Impossible to delete client."); </script>';
+    echo '<script>window.location = "http://localhost:8888/hospitalidee-php-crud/";</script>';
   }
 }
 ?>

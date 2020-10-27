@@ -20,6 +20,7 @@ if (isset($_POST['addClient']))
   else
   {
     echo '<script> alert("Impossible to create client."); </script>';
+    echo '<script>window.location = "http://localhost:8888/hospitalidee-php-crud/";</script>';
   }
 }
 ?>

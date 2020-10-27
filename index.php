@@ -101,6 +101,13 @@ include('connection.php');
         <div class="modal-body">
           <form action="add.php" method="POST">
             <div class="form-group">
+              <label for="title">Gender</label>
+              <select class="form-control" name="gender">
+                <option selected="selected">Madame</option>
+                <option>Monsieur</option>
+              </select>
+            </div>
+            <div class="form-group">
               <label for="title">Firstname</label>
               <input type="text" name="firstname" class="form-control" maxlength="50"
                 required>
@@ -109,13 +116,6 @@ include('connection.php');
               <label for="title">Lastname</label>
               <input type="text" name="lastname" class="form-control"  maxlength="50"
                 required>
-            </div>
-            <div class="form-group">
-              <label for="title">Gender</label>
-              <select class="form-control" name="gender">
-                <option selected="selected">Madame</option>
-                <option>Monsieur</option>
-              </select>
             </div>
             <div class="form-group">
               <label for="title">Email</label>
@@ -143,6 +143,12 @@ include('connection.php');
         <div class="modal-body">
           <div class="row">
             <div class="col-sm-5 col-xs-6 tital " >
+              <strong>Gender:</strong>
+            </div>
+            <div class="col-sm-7 col-xs-6 ">
+              <div id="viewGender"></div>
+            </div>
+            <div class="col-sm-5 col-xs-6 tital " >
               <strong>Firstname:</strong>
             </div>
             <div class="col-sm-7 col-xs-6 ">
@@ -153,12 +159,6 @@ include('connection.php');
             </div>
             <div class="col-sm-7 col-xs-6 ">
               <div id="viewLastname"></div>
-            </div>
-            <div class="col-sm-5 col-xs-6 tital " >
-              <strong>Gender:</strong>
-            </div>
-            <div class="col-sm-7 col-xs-6 ">
-              <div id="viewGender"></div>
             </div>
             <div class="col-sm-5 col-xs-6 tital " >
               <strong>Email:</strong>
@@ -181,7 +181,7 @@ include('connection.php');
     <div class="modal-dialog modal-md">
       <div class="modal-content">
         <div class="modal-header bg-warning text-white">
-          <h5 class="modal-title">Edit Record</h5>
+          <h5 class="modal-title">Edit Client</h5>
           <button class="close" data-dismiss="modal">
             <span>&times;</span>
           </button>
@@ -190,23 +190,20 @@ include('connection.php');
           <form action="update.php" method="POST">
             <input type="hidden" name="updateId" id="updateId">
             <div class="form-group">
+              <label for="title">Gender</label>
+              <input type="text" name="updateGender" id="updateGender" class="form-control" required>
+            </div>
+            <div class="form-group">
               <label for="title">Firstname</label>
-              <input type="text" name="updateFirstname" id="updateFirstname" class="form-control" maxlength="50"
-                required>
+              <input type="text" name="updateFirstname" id="updateFirstname" class="form-control" required>
             </div>
             <div class="form-group">
               <label for="title">Lastname</label>
-              <input type="text" name="updateLastname" id="updateLastname" class="form-control" maxlength="50"
-                required>
-            </div>
-            <div class="form-group">
-              <label for="title">Gender</label>
-              <input type="text" name="updateGender" id="updateGender" class="form-control" maxlength="50"
-                required>
+              <input type="text" name="updateLastname" id="updateLastname" class="form-control" required>
             </div>
             <div class="form-group">
               <label for="title">Email</label>
-              <input type="text" name="updateEmail" id="updateEmail" class="form-control" maxlength="50" required>
+              <input type="text" name="updateEmail" id="updateEmail" class="form-control" required>
             </div>
             <div class="modal-footer">
               <button type="submit" class="btn btn-warning" name="updateClient">Save Changes</button>
@@ -265,7 +262,6 @@ include('connection.php');
 
         $('#updateModal').modal('show');
 
-        // Get the table row data.
         $tr = $(this).closest('tr');
 
         var data = $tr.children("td").map(function() {
@@ -273,9 +269,9 @@ include('connection.php');
         }).get();
 
         $('#updateId').val(data[0]);
-        $('#updateFirstname').val(data[1]);
-        $('#updateLastname').val(data[2]);
-        $('#updateGender').val(data[3]);
+        $('#updateGender').val(data[1]);
+        $('#updateFirstname').val(data[2]);
+        $('#updateLastname').val(data[3]);
         $('#updateEmail').val(data[4]);
         });
         
@@ -288,16 +284,15 @@ include('connection.php');
 
         $('#viewModal').modal('show');
 
-        // Get the table row data.
         $tr = $(this).closest('tr');
 
         var data = $tr.children("td").map(function() {
             return $(this).text();
         }).get();
 
-        $('#viewFirstname').text(data[1]);
-        $('#viewLastname').text(data[2]);
-        $('#viewGender').text(data[3]);
+        $('#viewGender').text(data[1]);
+        $('#viewFirstname').text(data[2]);
+        $('#viewLastname').text(data[3]);
         $('#viewEmail').text(data[4]);
         });
     
@@ -310,7 +305,6 @@ include('connection.php');
 
         $('#deleteModal').modal('show');
         
-        // Get the table row data.
         $tr = $(this).closest('tr');
 
         var data = $tr.children("td").map(function() {
