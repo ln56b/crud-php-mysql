@@ -4,17 +4,18 @@ include('connection.php');
 
 if (isset($_POST['addClient']))
 {
+  $gender = $_POST['gender'];
   $firstname = $_POST['firstname'];
   $lastname = $_POST['lastname'];
-  $gender = $_POST['gender'];
   $email = $_POST['email'];
 
-  $sql = "INSERT INTO clients(firstname, lastname, gender, email) VALUES('$firstname', '$lastname', '$gender', '$email')";
+  $sql = "INSERT INTO clients(gender, firstname, lastname, email) VALUES('$gender', '$firstname', '$lastname', '$email')";
   $result = mysqli_query($conn, $sql);
 
   if ($result)
   {
     echo '<script> alert("Client succesfully saved."); </script>';
+    echo '<script>window.location = "http://localhost:8888/hospitalidee-php-crud/";</script>';
   }
   else
   {

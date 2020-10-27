@@ -11,7 +11,8 @@ if (isset($_POST['deleteClient']))
 
   if ($result)
   {
-    echo '<script> alert("Client successfully deleted."); </script>';
+    echo '<script> alert("Client succesfully deleted."); </script>';
+    echo '<script>window.location = "http://localhost:8888/hospitalidee-php-crud/";</script>';
   }
   else
   {
