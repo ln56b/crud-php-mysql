@@ -1,5 +1,5 @@
 <?php
-include('connection.php');
+include('./config/connection.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +12,7 @@ include('connection.php');
     integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>PHP and MySQL CRUD</title>
 </head>
 
@@ -22,7 +22,7 @@ include('connection.php');
     <div class="container">
       <ul class="navbar-brand">
         <li><strong>CRUD PHP & MYSQL</strong></li>
-        <li><a href="signin.php">Signin</a></li>
+        <li><a href="authentication/signin.php">Signin</a></li>
       </ul>
     </div>
   </nav>
