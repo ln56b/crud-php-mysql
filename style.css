@@ -1,0 +1,13 @@
+.navbar-brand {
+	display: flex;
+	margin: auto;
+}
+
+.navbar-brand > li {
+	list-style-type: none;
+	margin: 0 2rem;
+}
+
+.navbar-brand > li > a {
+	color: orange;
+}

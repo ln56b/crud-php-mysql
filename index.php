@@ -12,16 +12,30 @@ include('connection.php');
     integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <title>PHP and MySQL CRUD</title>
 </head>
 
 <body>
+ <!-- Navigation -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <ul class="navbar-brand">
+        <li><strong>CRUD PHP & MYSQL</strong></li>
+      <li><a href="#signin">Signin</a></li>
+        <li><a href="#clients">Clients</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br><br><br>
+
+  
   <div class="container">
-    <div class="row">
+    <div class="row"  id="clients">
       <div class="col-md-12 card">
         <div>
           <div class="head-title">
-            <h4 class="text-center">CRUD - PHP & MySQL</h4>
+            <h4 class="text-center">Clients</h4>
             <hr>
           </div>
           <div class="col-md-3 float-left add-new-button">
