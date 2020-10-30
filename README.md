@@ -10,7 +10,7 @@ A simple CRUD app with PHP, MySQL and Boostrap
 
 **Technologies**
 
-Apache
-PHP
-MySQL
-Bootstrap
+- Apache
+- PHP
+- MySQL
+- Bootstrap
