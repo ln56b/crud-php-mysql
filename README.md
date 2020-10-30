@@ -1,14 +1,14 @@
-General
+**General**
 
 A simple CRUD app with PHP, MySQL and Boostrap
 
-Objectives
+**Objectives**
 
 - Develop an app with WAMP for the first time
 
 - Use core PHP
 
-Technologies
+**Technologies**
 
 Apache
 PHP
